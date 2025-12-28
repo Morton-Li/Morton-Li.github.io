@@ -1,0 +1,60 @@
+/* =========================
+   1. Color system & tokens
+   ========================= */
+
+:root {
+  --bg: #faf9f7;
+  --fg: #1f2328;
+
+  --safe-padding: 2rem;
+}
+
+/* =========================
+   2. Base layout
+   ========================= */
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  min-height: 100svh;
+
+  background-color: var(--bg);
+  color: var(--fg);
+
+  font-family:
+    system-ui,
+    -apple-system,
+    BlinkMacSystemFont,
+    "Segoe UI",
+    sans-serif;
+
+  display: flex;
+  flex-direction: column;
+
+  padding: var(--safe-padding);
+}
+
+header,
+main,
+footer {
+  width: 100%;
+}
+
+
+header {
+  padding: 5rem 2rem;
+}
+
+footer {
+  margin-top: auto;
+  padding-top: 2rem;
+  text-align: center;
+}
