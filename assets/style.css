@@ -93,22 +93,28 @@ footer {
    ========================= */
 /* Typewriter effect */
 .typewriter {
-  overflow: hidden;
-  border-right: 3px solid var(--fg);
+  display: inline;
+  position: relative;
   white-space: nowrap;
-  animation: blink 0.7s infinite;
+}
+
+.typewriter::after {
+  content: '';
+  display: inline-block;
+  width: 3px;
+  height: 1em;
+  margin-left: 2px;
+  background-color: var(--fg);
+  animation: blink 0.7s steps(1, end) infinite;
+  vertical-align: bottom;
 }
 
 @keyframes blink {
-  0%, 49% {
-    border-right-color: var(--fg);
-  }
-  50%, 100% {
-    border-right-color: transparent;
-  }
+  0%   { opacity: 1; }
+  50%  { opacity: 0; }
+  100% { opacity: 1; }
 }
 
-.typewriter.complete {
-  border-right: none;
-  animation: none;
+.typewriter.complete::after {
+  display: none;
 }
