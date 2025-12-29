@@ -49,13 +49,7 @@ footer {
 }
 
 header {
-  padding: 5rem 2rem;
-}
-
-@media (max-width: 768px) {
-  header {
-    padding: 2rem 0%;
-  }
+  padding: 3rem 2rem;
 }
 
 header .greeting,
@@ -71,10 +65,27 @@ header .name {
   font-weight: 700;
 }
 
+main {
+  display: flex;
+  flex-direction: column;
+
+  padding: 0 2rem;
+}
+
 footer {
   margin-top: auto;
   padding-top: 2rem;
   text-align: center;
+}
+
+@media (max-width: 768px) {
+  header {
+    padding: 1.5rem 0%;
+  }
+
+  main {
+    padding: 0;
+  }
 }
 
 /* =========================
